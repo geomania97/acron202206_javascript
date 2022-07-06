@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_example3.html</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">-</button>
+    <button onclick="multi()">*</button>
+    <button onclick="divide()">/</button>
+    <button onclick="clear()">삭제</button>
+    <input type="text" id="num2">
+    =
+    <span id = "result"></span>
+
+    <script>
+
+        function plus(){
+            // 입력한 값을 읽어온다.
+            let one = document.querySelector("#num1").value 
+            let two = document.querySelector("#num2").value
+            // 연산의 결과 값을 얻어낸다.
+            let result =  Number(one) + Number(two);
+            // span 요소의 innerText 로 출력하기
+            document.querySelector("#result").innerText=result;
+        }
+        function minus(){
+             // 입력한 값을 읽어온다.
+            let one = document.querySelector("#num1").value 
+            let two = document.querySelector("#num2").value
+            // 연산의 결과 값을 얻어낸다.
+            let result =  Number(one) - Number(two);
+            // span 요소의 innerText 로 출력하기
+            document.querySelector("#result").innerText=result;
+        }
+        
+        function multi(){
+            // 입력한 값을 읽어온다.
+            let one = document.querySelector("#num1").value 
+            let two = document.querySelector("#num2").value
+            // 연산의 결과 값을 얻어낸다.
+            let result =  Number(one) * Number(two);
+            // span 요소의 innerText 로 출력하기
+            document.querySelector("#result").innerText=result;
+        }
+        
+        function divide(){
+            // 입력한 값을 읽어온다.
+            let one = document.querySelector("#num1").value 
+            let two = document.querySelector("#num2").value
+            // 연산의 결과 값을 얻어낸다.
+            let result =  Number(one) / Number(two);
+            // span 요소의 innerText 로 출력하기
+            document.querySelector("#result").innerText=result;
+        }
+        
+        function clear(){
+            document.querySelector("#num1").value=""; 
+            document.querySelector("#num2").value="";
+            document.querySelector("#result").innerText="";
+        }
+        
+    </script>
+</body>
+</html>
