@@ -10,60 +10,29 @@
     <input type="text" id="num1">
     <button onclick="plus()">+</button>
     <button onclick="minus()">-</button>
-    <button onclick="multi()">*</button>
-    <button onclick="divide()">/</button>
     <input type="text" id="num2">
     =
-    <span id = "result"></span>
-    <button onclick="clearAll()">삭제</button>
+    <span id="result"></span>
     <script>
-
         function plus(){
-            // 입력한 값을 읽어온다.
-            let one = document.querySelector("#num1").value 
-            let two = document.querySelector("#num2").value
-            // 연산의 결과 값을 얻어낸다.
-            let result =  Number(one) + Number(two);
+            //입력한 값을 읽어온다. 
+            let num1=document.querySelector("#num1").value;
+            let num2=document.querySelector("#num2").value;
+            // 연산의 결과 값을 얻어낸다
+            let result = Number(num1) + Number(num2);
             // span 요소의 innerText 로 출력하기
             document.querySelector("#result").innerText=result;
         }
-        
-        function minus(){
-             // 입력한 값을 읽어온다.
-            let one = document.querySelector("#num1").value 
-            let two = document.querySelector("#num2").value
-            // 연산의 결과 값을 얻어낸다.
-            let result =  Number(one) - Number(two);
+
+        let minus=function(){
+            //입력한 값을 읽어온다. 
+            let num1=document.querySelector("#num1").value;
+            let num2=document.querySelector("#num2").value;
+            // 연산의 결과 값을 얻어낸다
+            let result = Number(num1) - Number(num2);
             // span 요소의 innerText 로 출력하기
             document.querySelector("#result").innerText=result;
-        }
-        
-        function multi(){
-            // 입력한 값을 읽어온다.
-            let one = document.querySelector("#num1").value 
-            let two = document.querySelector("#num2").value
-            // 연산의 결과 값을 얻어낸다.
-            let result =  Number(one) * Number(two);
-            // span 요소의 innerText 로 출력하기
-            document.querySelector("#result").innerText=result;
-        }
-        
-        function divide(){
-            // 입력한 값을 읽어온다.
-            let one = document.querySelector("#num1").value 
-            let two = document.querySelector("#num2").value
-            // 연산의 결과 값을 얻어낸다.
-            let result =  Number(one) / Number(two);
-            // span 요소의 innerText 로 출력하기
-            document.querySelector("#result").innerText=result;
-        }
-        
-        function clearAll(){
-            document.querySelector("#num1").value=""; 
-            document.querySelector("#num2").value="";
-            document.querySelector("#result").innerText="";
-        }
-        
+        };
     </script>
 </body>
-</html>
+</html> 
