@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_test.html</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">-</button>
+    <input type="text" id="num2">
+    =
+    <span id = "result"></span>
+  
+    <script>
+        /*
+            페이지 로딩 시점에 함수에서 자주 사용되는 값을
+            미리 얻어내서 변수에 담아 놓는다.
+        */
+
+        // 잘못된 코드이다. 벨류값을 전역 영역에서 사용하면 초기값으로
+        // 빈공간을 갖고 오기 때문에 산술 연산이 불가능하다.
+        let one=document.querySelector("#num1").value;
+        let two=document.querySelector("#num1").value;
+        //위에 2줄 잘못된 코딩이다.
+
+        function plus(){
+            // 입력한 값을 읽어온다.
+          
+            // 연산의 결과 값을 얻어낸다.
+            let result =  Number(one) + Number(two);
+            // span 요소의 innerText 로 출력하기
+            document.querySelector("#result").innerText=result;
+        }
+        
+        function minus(){
+             // 입력한 값을 읽어온다.
+           
+            // 연산의 결과 값을 얻어낸다.
+            let result =  Number(one) - Number(two);
+            // span 요소의 innerText 로 출력하기
+            document.querySelector("#result").innerText=result;
+        }
+        
+    </script>
+</body>
+</html>
